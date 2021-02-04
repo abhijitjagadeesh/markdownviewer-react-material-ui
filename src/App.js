@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { ThemeProvider, Typography } from "@material-ui/core";
+import Navbar from "./components/Navbar";
+import Theme from "./utils/themes";
+import RenderMarkdown from "./components/RenderMarkdown";
 
-function App() {
+const App = () => {
+  const [documentSelected, setDocumentSelected] = useState("");
+
+  const handleChange = (event) => {
+    setDocumentSelected(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={Theme}>
+      <Navbar documentSelected={documentSelected} handleChange={handleChange} />
+      <Typography style={{ marginTop: 200 }} /*component={"span"}*/>
+        <RenderMarkdown
+          render={documentSelected}
+          style={{ marginTop: 200 }}
+        ></RenderMarkdown>
+      </Typography>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
