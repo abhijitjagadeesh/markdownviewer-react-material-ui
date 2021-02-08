@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/markdownviewer-react-material-ui/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/markdownviewer-react-material-ui/static/js/main.e2c03647.chunk.js",
-    "main.js.map": "/markdownviewer-react-material-ui/static/js/main.e2c03647.chunk.js.map",
+    "main.js": "/markdownviewer-react-material-ui/static/js/main.6928c362.chunk.js",
+    "main.js.map": "/markdownviewer-react-material-ui/static/js/main.6928c362.chunk.js.map",
     "runtime-main.js": "/markdownviewer-react-material-ui/static/js/runtime-main.b6219bf5.js",
     "runtime-main.js.map": "/markdownviewer-react-material-ui/static/js/runtime-main.b6219bf5.js.map",
-    "static/js/2.4bc915ba.chunk.js": "/markdownviewer-react-material-ui/static/js/2.4bc915ba.chunk.js",
-    "static/js/2.4bc915ba.chunk.js.map": "/markdownviewer-react-material-ui/static/js/2.4bc915ba.chunk.js.map",
+    "static/js/2.3f1c63f5.chunk.js": "/markdownviewer-react-material-ui/static/js/2.3f1c63f5.chunk.js",
+    "static/js/2.3f1c63f5.chunk.js.map": "/markdownviewer-react-material-ui/static/js/2.3f1c63f5.chunk.js.map",
     "index.html": "/markdownviewer-react-material-ui/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/markdownviewer-react-material-ui/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.4bc915ba.chunk.js.LICENSE.txt": "/markdownviewer-react-material-ui/static/js/2.4bc915ba.chunk.js.LICENSE.txt"
+    "static/js/2.3f1c63f5.chunk.js.LICENSE.txt": "/markdownviewer-react-material-ui/static/js/2.3f1c63f5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b6219bf5.js",
-    "static/js/2.4bc915ba.chunk.js",
+    "static/js/2.3f1c63f5.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.e2c03647.chunk.js"
+    "static/js/main.6928c362.chunk.js"
   ]
 }
