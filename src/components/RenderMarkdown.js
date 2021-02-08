@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     backgroundColor: "white",
     marginTop: "50px",
+    marginBottom: "100px",
     padding: "20px",
     borderRadius: "15px",
   },
@@ -25,6 +26,7 @@ const RenderMarkdown = ({ render }) => {
   let emptyFile = "Select A Document From The Dropdown List";
   const [data, setData] = useState(emptyFile);
   const classes = useStyles();
+  console.log(render);
 
   fetch("documents/" + render + ".md")
     .then((response) => response.text())
