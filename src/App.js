@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ThemeProvider, Typography } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core";
 import Navbar from "./components/Navbar";
-import Theme from "./utils/themes";
+import InnerTheme from "./utils/themes";
 import RenderMarkdown from "./components/RenderMarkdown";
 
 const App = () => {
@@ -12,15 +12,21 @@ const App = () => {
   };
 
   return (
-    <ThemeProvider theme={Theme}>
-      <Navbar documentSelected={documentSelected} handleChange={handleChange} />
-      <Typography style={{ marginTop: 200 }} /*component={"span"}*/>
-        <RenderMarkdown
-          render={documentSelected}
-          style={{ marginTop: 200 }}
-        ></RenderMarkdown>
-      </Typography>
-    </ThemeProvider>
+    <div
+      style={{
+        backgroundColor: "#003049",
+        width: "100%",
+        height: "100vh",
+      }}
+    >
+      <ThemeProvider theme={InnerTheme}>
+        <Navbar
+          documentSelected={documentSelected}
+          handleChange={handleChange}
+        />
+        <RenderMarkdown render={documentSelected}></RenderMarkdown>
+      </ThemeProvider>
+    </div>
   );
 };
 

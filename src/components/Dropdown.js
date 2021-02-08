@@ -27,9 +27,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 200,
-  },
-  dense: {
-    marginTop: theme.spacing(2),
+    backgroundColor: "#222",
+    justifyContent: "right",
+    alignItems: "right",
   },
   menu: {
     width: 200,
@@ -40,7 +40,7 @@ function Dropdown2({ docSelected, onChange }) {
   const classes = useStyles();
 
   return (
-    <form className={classes.container} noValidate autoComplete="off">
+    <form className={classes.container} /*noValidate autoComplete="off"*/>
       <TextField
         id="outlined-select-document"
         select

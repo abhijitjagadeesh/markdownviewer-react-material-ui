@@ -1,15 +1,7 @@
 import React from "react";
-import { Typography, makeStyles } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 function Title({ title }) {
-  const useStyles = makeStyles({
-    title: {
-      marginLeft: 830,
-      marginRight: -12,
-    },
-  });
-  const classes = useStyles();
-
   let document = "";
 
   if (title !== "None") {
@@ -17,7 +9,7 @@ function Title({ title }) {
   }
 
   return (
-    <Typography variant="h3" className={classes.title} style={{ flex: 1 }}>
+    <Typography variant="h3" style={{ flexGrow: 1 }} align="center">
       <div>{document}</div>
     </Typography>
   );
