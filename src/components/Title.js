@@ -9,7 +9,11 @@ function Title({ title }) {
   }
 
   return (
-    <Typography variant="h3" style={{ flexGrow: 1 }} align="center">
+    <Typography
+      variant="h3"
+      style={{ flexGrow: 1, color: "#FEA47F" }}
+      align="center"
+    >
       <div>{document}</div>
     </Typography>
   );

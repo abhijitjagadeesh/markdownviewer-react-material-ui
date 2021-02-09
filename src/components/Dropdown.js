@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#222",
     justifyContent: "right",
     alignItems: "right",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderColor: "#FEA47F",
   },
   menu: {
     width: 200,
