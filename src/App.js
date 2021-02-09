@@ -3,6 +3,7 @@ import { ThemeProvider } from "@material-ui/core";
 import Navbar from "./components/Navbar";
 import InnerTheme from "./utils/themes";
 import RenderMarkdown from "./components/RenderMarkdown";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [documentSelected, setDocumentSelected] = useState("");
@@ -17,7 +18,6 @@ const App = () => {
         backgroundColor: "#003049",
         width: "100%",
         height: "100vh",
-        overflowY: "auto",
       }}
     >
       <ThemeProvider theme={InnerTheme}>
@@ -26,6 +26,7 @@ const App = () => {
           handleChange={handleChange}
         />
         <RenderMarkdown render={documentSelected}></RenderMarkdown>
+        <Footer />
       </ThemeProvider>
     </div>
   );

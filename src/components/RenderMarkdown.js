@@ -5,12 +5,15 @@ import { makeStyles, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   textField: {
     width: "70%",
+    height: "45%",
     margin: "0 auto",
     backgroundColor: "white",
     marginTop: "50px",
     marginBottom: "100px",
     padding: "20px",
     borderRadius: "15px",
+    overflow: "hidden",
+    overflowY: "auto",
   },
   emptyTextField: {
     width: "70%",
@@ -26,7 +29,6 @@ const RenderMarkdown = ({ render }) => {
   let emptyFile = "Select A Document From The Dropdown List";
   const [data, setData] = useState(emptyFile);
   const classes = useStyles();
-  console.log(render);
 
   fetch("documents/" + render + ".md")
     .then((response) => response.text())
