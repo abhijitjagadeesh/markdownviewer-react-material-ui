@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { makeStyles, Typography } from "@material-ui/core";
 
@@ -30,15 +30,17 @@ const RenderMarkdown = ({ render }) => {
   const [data, setData] = useState(emptyFile);
   const classes = useStyles();
 
-  fetch("documents/" + render + ".md")
-    .then((response) => response.text())
-    .then((text) => {
-      if (render !== "") {
-        setData(text);
-      } else {
-        setData(emptyFile);
-      }
-    });
+  useEffect(() => {
+    fetch("documents/" + render + ".md")
+      .then((response) => response.text())
+      .then((text) => {
+        if (render !== "") {
+          setData(text);
+        } else {
+          setData(emptyFile);
+        }
+      });
+  }, [render]);
 
   if (data === emptyFile) {
     return (
