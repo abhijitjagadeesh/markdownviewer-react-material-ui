@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import ReactMarkdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
 import { makeStyles, Typography } from "@material-ui/core";
 import { ViewerContext } from "../App";
 
@@ -55,7 +55,7 @@ const RenderMarkdown = () => {
 
   return (
     <div className={classes.textField}>
-      <ReactMarkdown source={data} escapeHtml={false} />
+      <Markdown>{data}</Markdown>
     </div>
   );
 };
