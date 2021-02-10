@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/markdownviewer-react-material-ui/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/markdownviewer-react-material-ui/static/js/main.4479f9d1.chunk.js",
-    "main.js.map": "/markdownviewer-react-material-ui/static/js/main.4479f9d1.chunk.js.map",
-    "runtime-main.js": "/markdownviewer-react-material-ui/static/js/runtime-main.b6219bf5.js",
-    "runtime-main.js.map": "/markdownviewer-react-material-ui/static/js/runtime-main.b6219bf5.js.map",
-    "static/js/2.05053bcc.chunk.js": "/markdownviewer-react-material-ui/static/js/2.05053bcc.chunk.js",
-    "static/js/2.05053bcc.chunk.js.map": "/markdownviewer-react-material-ui/static/js/2.05053bcc.chunk.js.map",
-    "index.html": "/markdownviewer-react-material-ui/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/markdownviewer-react-material-ui/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.05053bcc.chunk.js.LICENSE.txt": "/markdownviewer-react-material-ui/static/js/2.05053bcc.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/static/js/main.7f3a540e.chunk.js",
+    "main.js.map": "/static/js/main.7f3a540e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d919ccba.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d919ccba.js.map",
+    "static/js/2.f591d3fa.chunk.js": "/static/js/2.f591d3fa.chunk.js",
+    "static/js/2.f591d3fa.chunk.js.map": "/static/js/2.f591d3fa.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.f591d3fa.chunk.js.LICENSE.txt": "/static/js/2.f591d3fa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b6219bf5.js",
-    "static/js/2.05053bcc.chunk.js",
+    "static/js/runtime-main.d919ccba.js",
+    "static/js/2.f591d3fa.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.4479f9d1.chunk.js"
+    "static/js/main.7f3a540e.chunk.js"
   ]
 }
