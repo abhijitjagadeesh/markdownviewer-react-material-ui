@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ReactMarkdown from "react-markdown";
 import { makeStyles, Typography } from "@material-ui/core";
+import { ViewerContext } from "../App";
 
 const useStyles = makeStyles((theme) => ({
   textField: {
@@ -28,22 +29,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const RenderMarkdown = ({ render }) => {
+const RenderMarkdown = () => {
+  const [documentSelected] = useContext(ViewerContext);
   let emptyFile = "Select A Document From The Dropdown List";
   const [data, setData] = useState(emptyFile);
   const classes = useStyles();
 
   useEffect(() => {
-    fetch("documents/" + render + ".md")
-      .then((response) => response.text())
-      .then((text) => {
-        if (render !== "") {
-          setData(text);
-        } else {
-          setData(emptyFile);
-        }
-      });
-  }, [render]);
+    if (documentSelected !== "") {
+      fetch("documents/" + documentSelected + ".md")
+        .then((response) => response.text())
+        .then((text) => {
+          documentSelected !== "" ? setData(text) : setData(emptyFile);
+        });
+    }
+  }, [documentSelected]);
 
   if (data === emptyFile) {
     return (

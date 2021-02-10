@@ -15,6 +15,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const footerElementsStyle = {
+  paddingRight: 30,
+  paddingTop: 10,
+};
+
 function Footer() {
   const classes = useStyles();
   return (
@@ -26,10 +31,10 @@ function Footer() {
             size: "2em",
           }}
         >
-          <SiFacebook style={{ paddingRight: 30, paddingTop: 10 }} />
-          <IoLogoTwitter style={{ paddingRight: 30 }} />
-          <IoMail style={{ paddingRight: 30 }} />
-          <GoMarkGithub style={{ paddingRight: 30 }} />
+          <SiFacebook style={footerElementsStyle} />
+          <IoLogoTwitter style={footerElementsStyle} />
+          <IoMail style={footerElementsStyle} />
+          <GoMarkGithub style={footerElementsStyle} />
         </IconContext.Provider>
       </Typography>
     </div>

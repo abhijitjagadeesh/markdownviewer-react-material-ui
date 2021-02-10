@@ -18,15 +18,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navbar = ({ documentSelected, handleChange }) => {
+const Navbar = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <AppBar position="static" color="primary">
         <Toolbar>
           <Avatar src="./img/synamedia.jpg" className={classes.avatar}></Avatar>
-          <Title title={documentSelected} />
-          <Dropdown docSelected={documentSelected} onChange={handleChange} />
+          <Title />
+          <Dropdown />
         </Toolbar>
       </AppBar>
     </div>

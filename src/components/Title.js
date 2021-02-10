@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Typography } from "@material-ui/core";
+import { ViewerContext } from "../App";
 
-function Title({ title }) {
-  let document = "";
-
-  if (title !== "None") {
-    document = title;
-  }
+function Title() {
+  const [documentSelected] = useContext(ViewerContext);
 
   return (
     <Typography
@@ -14,7 +11,7 @@ function Title({ title }) {
       style={{ flexGrow: 1, color: "#FEA47F" }}
       align="center"
     >
-      <div>{document}</div>
+      <div>{documentSelected !== "None" ? documentSelected : ""}</div>
     </Typography>
   );
 }

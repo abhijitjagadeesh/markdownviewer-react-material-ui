@@ -1,22 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
-
-const documents = [
-  {
-    value: "Document1",
-    label: "Document1",
-  },
-  {
-    value: "Document2",
-    label: "Document2",
-  },
-  {
-    value: "Document3",
-    label: "Document3",
-  },
-];
+import { ViewerContext } from "../App";
+import documents from "./documents.json";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -30,27 +17,25 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#222",
     justifyContent: "right",
     alignItems: "right",
-    // borderWidth: "1px",
-    // borderStyle: "solid",
-    // borderColor: "#FEA47F",
   },
   menu: {
     width: 200,
   },
 }));
 
-function Dropdown2({ docSelected, onChange }) {
+function Dropdown() {
+  const [documentSelected, handleDocChange] = useContext(ViewerContext);
   const classes = useStyles();
 
   return (
-    <form className={classes.container} /*noValidate autoComplete="off"*/>
+    <form className={classes.container}>
       <TextField
         id="outlined-select-document"
         select
-        label={docSelected === "" ? "Select a Document" : ""}
+        label={documentSelected === "" ? "Select a Document" : ""}
         className={classes.textField}
-        value={docSelected}
-        onChange={onChange}
+        value={documentSelected}
+        onChange={handleDocChange}
         InputLabelProps={{ shrink: false }}
         SelectProps={{
           MenuProps: {
@@ -60,9 +45,9 @@ function Dropdown2({ docSelected, onChange }) {
         margin="normal"
         variant="outlined"
       >
-        {documents.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
+        {documents.map((document) => (
+          <MenuItem key={document.value} value={document.value}>
+            {document.label}
           </MenuItem>
         ))}
       </TextField>
@@ -70,4 +55,4 @@ function Dropdown2({ docSelected, onChange }) {
   );
 }
 
-export default Dropdown2;
+export default Dropdown;
